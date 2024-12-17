@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    background-color: #c5d8f5; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+.header {
+    background: url('https://img.freepik.com/premium-photo/empty-road-along-trees-mountains-against-sky_1048944-24189414.jpg?w=900') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px; /* Increased padding for a bolder header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px; /* Increased margin for spacing */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: #ff5722; /* Change color on hover */
+}
+.img{
+    align-content: flex-start;
+    border-radius: 20px;
+}
+.hero {
+    margin-top: 30px; /* Increased margin for better separation */
+    text-align: center; /* Center text for a modern look */
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Slightly larger font size */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.hero p {
+    font-size: 1.6rem; /* Slightly larger paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Increased padding for a larger button */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+main {
+    padding: 40px 20px; /* Increased padding for a spacious layout */
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    flex: 1 1 calc(25% - 20px); /* 4 cards in a row */
+    box-sizing: border-box;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards in a row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* 1 card in a row */
+    }
+}
+section {
+    margin-bottom: 60px; /* Increased margin for better spacing */
+    background: white; /* White background for sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Padding inside sections */
+}
+
+
+#contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contact-form, .map {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #77a8f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #4808f7;
+}
+.footer {
+    background-color: #2c3e50; /* Dark background */
+    color: #ecf0f1; /* Light text */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links, .footer-social {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-links h4, .footer-social h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 30px; /* Adjust the size of social media icons */
+    height: 30px;
+}
+
+.footer p {
+    margin-top: 20px;
+    font-size: 0.9em;
+}

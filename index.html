@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountaineering Adventures</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function changeContent(page) {
+    const contentDiv = document.getElementById('content');
+    
+    switch (page) {
+        case 'home':
+            contentDiv.innerHTML = `
+                <h2>Welcome to Mountaineering Adventures!</h2>
+                <p>Your journey begins here.</p>`;
+            break;
+        case 'about':
+            contentDiv.innerHTML = `
+                <h2>About Us</h2>
+                <p>We are passionate about mountaineering and offer guided trips to breathtaking peaks.</p>`;
+            break;
+        case 'trips':
+            contentDiv.innerHTML = `
+                <h2>Upcoming Trips</h2>
+                <ul>
+                    <li>Everest Base Camp Trek - April 2025</li>
+                    <li>Kilimanjaro Climb - June 2025</li>
+                    <li>Swiss Alps Adventure - August 2025</li>
+                </ul>`;
+            break;
+        case 'contact':
+            contentDiv.innerHTML = `
+                <h2>Contact Us</h2>
+                <p>Email: info@mountaineeringadventures.com</p>`;
+            break;
+        default:
+            contentDiv.innerHTML = `
+                <h2>Welcome to Mountaineering Adventures!</h2>
+                <p>Your journey begins here.</p>`;
+            break;
+    }
+}
+    </script>
+</head>
+<header class="header">
+    <nav class="navbar">
+        <div class="logo"> <img src="https://th.bing.com/th/id/OIP.eHGWOqyT8GwmJ_BhmBXeVwHaHg?rs=1&pid=ImgDetMain" class="img" width="100px" height="100px" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="index.html" onclick="changeContent('home'); return false;">Home</a></li>
+            <li><a href="index.html" onclick="changeContent('about'); return false;">About Us</a></li>
+            <li><a href="index.html" onclick="changeContent('trips'); return false;">Upcoming Trips</a></li>
+            <li><a href="index.html" onclick="changeContent('contact'); return false;">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <h1>Explore the Great Outdoors</h1>
+        <p>Join us for unforgettable mountaineering experiences.</p>
+        <button onclick="bookTrip()">Book a Trip</button>
+    </div>
+</header>
+<main>
+    <div id="content">
+        <!-- Dynamic content will be loaded here -->
+        <h2>Welcome to Mountaineering Adventures!</h2>
+        <p>Your journey begins here.</p>
+    </div>
+</main>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are passionate about mountaineering and offer guided trips to some of the most breathtaking peaks.</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/beautiful-shot-grassy-hills-covered-trees-near-mountains-dolomites-italy_181624-24400.jpg?t=st=1732908011~exp=1732911611~hmac=74c53740af4ab33dbc178b962b4e5332f84e484c3218cc5567e6bb309efb4d05&w=1480" alt="Card Image 1">
+                    <h3>Physical Fitness</h3>
+                    <p>Mountaineering enhances your physical fitness and endurance, helping you stay healthy and active.</p>
+                </div>
+                <div class="card">
+                    <img src="https://img.freepik.com/premium-photo/snow-capped-rocky-mountain-yoho-national-park-british-columbia-canada_63313-444.jpg?w=1480" alt="Card Image 2">
+                    <h3>Adventure</h3>
+                    <p>Experience the thrill of adventure as you conquer new heights and explore breathtaking landscapes.</p>
+                </div>
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/high-angle-shot-mossy-stones-mountain-cloudy-sunset-sky_181624-21761.jpg?t=st=1732908485~exp=1732912085~hmac=afab18003b0e18779c9a8cd3aed48c0eac42b730e3bab5fb41a7af588071e277&w=1480" alt="Card Image 3">
+                    <h3>Stress Relief</h3>
+                    <p>Get away from the hustle and bustle of daily life, and enjoy the peace and tranquility of nature.</p>
+                </div>
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/beautiful-shot-mountains-grassy-hills-with-trees-dolomite-italy_181624-10396.jpg?t=st=1732908529~exp=1732912129~hmac=e8d04af49e06cf7c86d865909d7b50f1f60f05b5a553595595370747e3a8764b&w=1800" alt="Card Image 4">
+                    <h3>Community</h3>
+                    <p>Join a community of like-minded individuals who share your passion for the great outdoors.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <p>Email: info@mountaineeringadventures.com</p>
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+        
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+        
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+            <div class="map">
+                <h2>Find Us Here</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509206!2d-87.62979838468173!3d41.87811327922044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca1a2c8b0e3%3A0x5e7f5d8d1b6c2d9!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1630435671701!5m2!1sen!2sus"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>    
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#adventures">Adventures</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/009/995/711/non_2x/3d-facebook-logo-icon-blue-color-free-png.png" alt="Facebook"></a>
+                    <a href="https://twitter.com" target="_blank"><img src="https://th.bing.com/th/id/R.9a3a06f78cc0a8d79fce59e2de6da146?rik=ILqMTdHz1qdDlQ&riu=http%3a%2f%2fhopeforyourfamily.com%2fwp-content%2fuploads%2f2017%2f11%2fTwitter-icon.png&ehk=XWbLimchLGw6BotlvPx9VcWou77pVsY20fDhXfXEBOs%3d&risl=&pid=ImgRaw&r=0" alt="Twitter"></a>
+                    <a href="https://instagram.com" target="_blank"><img src="https://th.bing.com/th/id/OIP.JCI8klaaA1w4LCtljpeJoAHaHa?rs=1&pid=ImgDetMain" alt="Instagram"></a>
+                    <a href="https://linkedin.com" target="_blank"><img src="https://www.freeiconspng.com/uploads/linkedin-icon-png-transparent-images--pictures--becuo-4.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 Mountaineering Adventures. All rights reserved.</p>
+    </footer>
+
+<script> 
+    function bookTrip() {
+        alert("Thank you for your interest! We will contact you soon.");
+    }
+     </script>
+        
+    <script src="script.js"></script>
+</body>
+</html>
